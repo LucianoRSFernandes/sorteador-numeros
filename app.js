@@ -8,6 +8,11 @@ function sortear(){
         return;
     }
 
+    if (quantidade > (limiteSuperior - limiteInferior +1)) {
+        alert('verificar intervalo considerado para sorteio');
+        return;
+    }
+
     let sorteados = [];
     let numero;
     
@@ -15,7 +20,7 @@ function sortear(){
         numero = obterNumeroAleatorio(limiteInferior, limiteSuperior);
 
         while (sorteados.includes(numero)) {
-            numero = obterNumeroAleatorio(limiteInferior,limiteSuperior);
+            numero = obterNumeroAleatorio(limiteInferior, limiteSuperior);
         }
 
         sorteados.push(numero);
