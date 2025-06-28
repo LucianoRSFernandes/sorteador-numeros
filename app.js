@@ -56,6 +56,7 @@ function reiniciar() {
         alterarStatusBotao();
 
         let botao = document.getElementById('btn-reiniciar');
-        botao.classList.remove('container__botao');
-        botao.classList.add('container__botao-desabilitado');
+        if (botao.classList.remove('container__botao')) {
+            botao.classList.add('container__botao-desabilitado');
+        }
 }
